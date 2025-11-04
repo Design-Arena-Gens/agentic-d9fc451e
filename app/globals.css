@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(139, 0, 255, 0.15), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(22, 182, 255, 0.12), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255, 0, 79, 0.12), transparent 40%);
+  opacity: 0.7;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: -2;
+}
+
+a {
+  color: theme('colors.ectoplasm');
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.glow-text {
+  text-shadow: 0 0 8px rgba(143, 248, 255, 0.45), 0 0 20px rgba(143, 248, 255, 0.25);
+}
